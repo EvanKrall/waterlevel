@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#!/bin/bash
+set -e
 
 PINS=/sys/kernel/debug/pinctrl/44e10800.pinmux/pins
 SLOTS=/sys/devices/platform/bone_capemgr/slots
@@ -20,14 +20,13 @@ GPIOS=(66 67 69 68 45 44 23 26 47 46)
 BOTTOM_PIN=${GPIOS[0]}
 
 for pin in "${GPIOS[@]}"; do
-	echo "$pin" > $GPIO/export
+	echo "$pin" > $GPIO/export 2>/dev/null || true
 	if [[ $pin == $BOTTOM_PIN ]]; then
 		echo "out" > $GPIO/gpio$pin/direction
 		echo "0" > $GPIO/gpio$pin/value
 	else
 		echo "in" > $GPIO/gpio$pin/direction
 	fi
-	cat $GPIO/gpio$pin/direction
 done
 
 depth=0
