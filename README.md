@@ -61,6 +61,8 @@ I've set up [consul](https://github.com/hashicorp/consul) to run my check,
  [AWS SNS](https://aws.amazon.com/sns/).
 The SNS topic is configured to [send text messages](https://docs.aws.amazon.com/sns/latest/dg/sms_publish-to-topic.html) to my and my roommates' phones.
 
+![a screenshot of an SMS, saying "🎄 > chip::water_level is warning"](text_screenshot.png)
+
 Why consul-alerts?
 I'm already running a consul cluster, so this was a low-effort solution for me.
 Consul-alerts will tell me if the CHIP loses power or crashes (assuming my consul servers are up).
