@@ -21,9 +21,14 @@ The HC-SR04 is a 5V device, while the CHIP is 3.3v, which means we need a level 
 
 I wired things up on a perf board just to keep things tidy:
 
-![A picture of the hardware sitting on a table](hardware.jpg)
+![CHIP with attached level shifter board, sitting on a table, next to the rangefinder.](hardware.jpg)
 
 More detailed wiring instructions are available in the README for [spi_hcsr04](https://github.com/EvanKrall/spi_hcsr04).
+
+My tree stand has some little slots near the top for some reason, so I used some [Instamorph](http://www.instamorph.com/)
+ to make a little holder for the rangefinder that fits into one of these.
+
+![The rangefinder installed on the Christmas tree stand with Instamorph holder. Some duct tape keeps it from slipping out.](installed.jpg)
 
 ## The software
 
