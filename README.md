@@ -7,7 +7,7 @@ have it text you whenever the water level is low.
 
 ## The hardware
 
-Last year, I took 10 wires, placed one end of each of them at a different depth in the water, and used a Beaglebone's GPIO pins to measure connectivity between them to measure water level.
+Last year, I took 10 wires, placed one end of each of them at a different depth in the water, and used a [Beaglebone](https://beagleboard.org/bone)'s GPIO pins to measure connectivity between them to measure water level.
 This has poor resolution, and corrosion/gunk buildup at the underwater end of the wires can make it stop working.
 Water isn't as conductive as you might think:
  the pull-up resistors on my sense pins were sometimes enough to cause false readings.
@@ -49,7 +49,7 @@ By connecting MOSI to the rangefinder's Trig pin, we can trigger the rangefinder
 Then, by connecting MISO to the rangefinder's Echo pin, we can see the response.
 We just need to pad the transmit buffer so that it's long enough to see the whole echo pulse, then count the number of high bits in the response.
 
-I've published the code to do this on [my Github](https://github.com/EvanKrall/spi_hcsr04)
+I've published the code to read the rangefinder on [another Github project](https://github.com/EvanKrall/spi_hcsr04).
 
 ### Alerting
 
